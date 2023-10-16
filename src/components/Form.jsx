@@ -1,6 +1,6 @@
 
 import { useState, useReducer } from "react";
-import Tasks from "./Tasks";
+import Task from "./Task";
 
 export const ACTIONS = {
     ADD_TASK: 'add_task',
@@ -68,11 +68,12 @@ const Form = () => {
                 </div>
                 <button type="submit"  className="add_btn">Add</button>
         </form>
+
         {showTask &&
         <section className="add-modal">
             <h4>Task List</h4>
             {tasks.map(task => {
-                return <Tasks key ={task.id} task={task} dispatch={dispatch} />
+                return <Task key={task.id} task={task} dispatch={dispatch} />
             })
 
             }

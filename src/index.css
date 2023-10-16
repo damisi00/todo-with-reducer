@@ -137,6 +137,10 @@ li p{
   input, .add_btn{
     padding: .6rem;
   }
+
+  .add-modal{
+    width: 80%;
+  }
 }
 
 @media (max-width: 481px){
